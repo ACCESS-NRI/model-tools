@@ -24,4 +24,4 @@ spack:
         include:
           - fre-nctools
         projections:
-          - fre-nctools/2024.05.01
+          fre-nctools: '{name}/2024.05.01'
