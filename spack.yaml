@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - fre-nctools@git.5d306c05d9fe755cab04eedc8fd3de0d3c8355a0=2024.05
+    - fre-nctools@git.5d306c05d9fe755cab04eedc8fd3de0d3c8355a0
   packages:
     netcdf-c:
       require:
