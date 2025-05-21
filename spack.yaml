@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - fre-nctools@git.5d306c05d9fe755cab04eedc8fd3de0d3c8355a0
+    - fre-nctools@git.2024.05.01
   packages:
     netcdf-c:
       require:
@@ -24,4 +24,4 @@ spack:
         include:
           - fre-nctools
         projections:
-          - fre-nctools/5d306c05d9fe755cab04eedc8fd3de0d3c8355a0
+          - fre-nctools/2024.05.01
