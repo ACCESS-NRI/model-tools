@@ -24,4 +24,4 @@ spack:
         include:
           - fre-nctools
         projections:
-          - fre-nctools/2024.05
+          - fre-nctools/5d306c05d9fe755cab04eedc8fd3de0d3c8355a0
