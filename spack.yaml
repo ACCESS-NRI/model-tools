@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - fre-nctools@git.2024.05.01
+    - fre-nctools@git.2024.05
   packages:
     fre-nctools:
       require:
@@ -28,4 +28,4 @@ spack:
         include:
           - fre-nctools
         projections:
-          fre-nctools: '{name}/2024.05.01'
+          fre-nctools: '{name}/2024.05'
