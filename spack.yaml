@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - fre-nctools@git.2024.05
+    - fre-nctools@2024.05
   packages:
     fre-nctools:
       require:
