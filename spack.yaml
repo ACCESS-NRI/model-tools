@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - fre-nctools@2024.05
+    - fre-nctools@2024.05 %intel@2021.10.0
     - gh@2.43.1
   packages:
     netcdf-c:
@@ -13,10 +13,6 @@ spack:
     netcdf-fortran:
       require:
         - '@4.6.1'
-    all:
-      require:
-        - '%intel@2021.10.0'
-        - 'target=x86_64'
   view: true
   concretizer:
     unify: true
@@ -27,3 +23,4 @@ spack:
           - fre-nctools
         projections:
           fre-nctools: '{name}/2024.05'
+          gh: '{name}/2.43.1
