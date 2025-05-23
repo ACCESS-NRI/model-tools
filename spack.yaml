@@ -9,8 +9,10 @@ spack:
   packages:
     fre-nctools:
       require:
-        - '@2024.05'
         - '%intel@2021.10.0'
+    fre-nctools:
+      require:
+        - '%gcc'
     netcdf-c:
       require:
         - '@4.9.2'
