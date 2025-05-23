@@ -6,9 +6,6 @@ spack:
   specs:
     - fre-nctools@2024.05
   packages:
-    fre-nctools:
-      require:
-        - '@2024.05'
     netcdf-c:
       require:
         - '@4.9.2'
