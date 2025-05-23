@@ -4,9 +4,13 @@
 # configuration settings.
 spack:
   specs:
-    - fre-nctools@2024.05 %intel@2021.10.0
+    - fre-nctools@2024.05
     - gh@2.43.1
   packages:
+    fre-nctools:
+      require:
+        - '@2024.05'
+        - '%intel@2021.10.0'
     netcdf-c:
       require:
         - '@4.9.2'
