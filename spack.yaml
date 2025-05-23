@@ -5,6 +5,7 @@
 spack:
   specs:
     - fre-nctools@2024.05
+    - gh@2.43.1
   packages:
     netcdf-c:
       require:
