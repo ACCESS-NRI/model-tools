@@ -13,6 +13,9 @@ spack:
     gh:
       require:
         - '%gcc'
+    go:
+      require:
+        - '%gcc'
     netcdf-c:
       require:
         - '@4.9.2'
