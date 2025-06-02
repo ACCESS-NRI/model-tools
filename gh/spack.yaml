@@ -4,24 +4,14 @@
 # configuration settings.
 spack:
   specs:
-    - fre-nctools@2024.05
     - gh@2.43.1
   packages:
-    fre-nctools:
-      require:
-        - '%intel@2021.10.0'
     gh:
       require:
         - '%gcc'
     go:
       require:
         - '%gcc'
-    netcdf-c:
-      require:
-        - '@4.9.2'
-    netcdf-fortran:
-      require:
-        - '@4.6.1'
   view: true
   concretizer:
     unify: true
@@ -29,8 +19,6 @@ spack:
     default:
       tcl:
         include:
-          - fre-nctools
           - gh
         projections:
-          fre-nctools: '{name}/2024.05'
           gh: '{name}/2.43.1'
