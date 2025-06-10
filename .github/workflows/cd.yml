@@ -53,8 +53,13 @@ jobs:
     name: CD
     needs:
       - setup-cd
+    # A matrix strategy with no elements is considered an error, so we only run this job if there are changed manifests
+    if: needs.setup-cd.outputs.manifest != '[]'
     strategy:
+      # The failure of install of an unrelated tool shouldn't affect the others
       fail-fast: false
+      # We don't want to spam the spack instance with install requests - this means that it will seem that
+      # only one of the jobs is being run within the matrix.
       max-parallel: 1
       matrix:
         manifest: ${{ fromJson(needs.setup-cd.outputs.manifest) }}

@@ -89,6 +89,8 @@ jobs:
     name: CI
     needs:
       - setup-pr
+    # A matrix strategy with no elements is considered an error, so we only run this job if there are changed manifests
+    if: needs.setup-pr.outputs.manifest != '[]'
     strategy:
       # The failure of install of an unrelated tool shouldn't affect the others
       fail-fast: false
