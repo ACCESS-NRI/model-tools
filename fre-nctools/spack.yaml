@@ -1,0 +1,27 @@
+# This is a Spack Environment file!!
+#
+# It describes a set of packages to be installed, along with
+# configuration settings.
+spack:
+  specs:
+    - fre-nctools@2024.05
+  packages:
+    fre-nctools:
+      require:
+        - '%intel@2021.10.0'
+    netcdf-c:
+      require:
+        - '@4.9.2'
+    netcdf-fortran:
+      require:
+        - '@4.6.1'
+  view: true
+  concretizer:
+    unify: true
+  modules:
+    default:
+      tcl:
+        include:
+          - fre-nctools
+        projections:
+          fre-nctools: '{name}/2024.05'
