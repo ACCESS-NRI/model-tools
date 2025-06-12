@@ -60,7 +60,9 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c  # v46.0.6
         with:
-          since_last_remote_commit: true
+          # If it is a non-closed pull request, we want to get the changed files since the last remote commit, so we don't redeploy files not changed in a commit
+          # If it is a closed PR, or an issue_comment with !redeploy, we want to get the changed files across the whole branch
+          since_last_remote_commit: ${{ github.event_name == 'pull_request' && github.event.action != 'closed' }}
           json: true
           output_dir: .
           write_output_files: true
@@ -90,7 +92,11 @@ jobs:
     needs:
       - setup-pr
     # A matrix strategy with no elements is considered an error, so we only run this job if there are changed manifests
-    if: needs.setup-pr.outputs.manifest != '[]'
+    # and it is either a non-closed pull request or an issue comment that starts with !redeploy
+    if: >-
+      needs.setup-pr.outputs.manifest != '[]' &&
+      ((github.event_name == 'pull_request' && github.event.action != 'closed') ||
+      (github.event_name == 'issue_comment' && startsWith(github.event.comment.body, '!redeploy')))
     strategy:
       # The failure of install of an unrelated tool shouldn't affect the others
       fail-fast: false
@@ -112,7 +118,9 @@ jobs:
 
   pr-closed:
     name: Closed
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    if: >-
+      needs.setup-pr.outputs.manifest != '[]' &&
+      github.event_name == 'pull_request' && github.event.action == 'closed'
     needs:
       - setup-pr
     strategy:
