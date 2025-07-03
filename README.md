@@ -25,7 +25,7 @@ module avail model-tools
 ```
 or a specific tool
 ```
-module avail model-tools
+module avail model-tools/fre-nctools
 ```
 It also works without the `model-tools` namespace:
 ```
