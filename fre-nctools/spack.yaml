@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - fre-nctools@2024.05
+    - fre-nctools@2024.05-1
   packages:
     fre-nctools:
       require:
@@ -24,4 +24,4 @@ spack:
         include:
           - fre-nctools
         projections:
-          fre-nctools: 'model-tools/{name}/2024.05'
+          fre-nctools: 'model-tools/{name}/2024.05-1'
