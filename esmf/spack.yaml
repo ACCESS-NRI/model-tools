@@ -43,4 +43,4 @@ spack:
         include:
           - esmf
         projections:
-          esmf: 'model-tools/{name}/v8.7.0
+          esmf: 'model-tools/{name}/v8.7.0'
