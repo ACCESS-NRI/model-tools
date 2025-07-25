@@ -6,10 +6,9 @@ spack:
   specs:
     - esmf@git.v8.7.0
   packages:
-    packages:
-     parallelio:
-       require:
-         - '@2.6.2+pnetcdf'
+    parallelio:
+      require:
+        - '@2.6.2+pnetcdf'
     netcdf-c:
       require:
         - '@4.9.2 build_system=cmake build_type=RelWithDebInfo'
@@ -30,11 +29,11 @@ spack:
         - '%gcc'
     libiconv:
       require:
-         - '%gcc'
-     all:
-       require:
-         - '%intel@2021.10.0'
-         - 'target=x86_64_v4'
+          - '%gcc'
+    all:
+      require:
+        - '%intel@2021.10.0'
+        - 'target=x86_64_v4'
   view: true
   concretizer:
     unify: true
