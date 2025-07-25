@@ -8,7 +8,11 @@ Deployment is on to HPC targets, in this case gadi@NCI, utilising the [build-cd]
 
 ## Supported tools
 
-* `fre-nctools`: [FRE-NCtools](https://github.com/NOAA-GFDL/FRE-NCtools) is a collection of tools for creating grids and mosaics commonly used in climate and weather models, the remapping of data among grids, and the creation and manipulation of netCDF files.
+### fre-nctools
+[FRE-NCtools](https://github.com/NOAA-GFDL/FRE-NCtools) is a collection of tools for creating grids and mosaics commonly used in climate and weather models, the remapping of data among grids, and the creation and manipulation of netCDF files.
+
+### mppnccombine-fast
+[mppnccombine-fast](https://github.com/ACCESS-NRI/mppnccombine-fast) is an accelerated version of the mppnccombine post-processing tool for MOM.
 
 ## How to use
 
