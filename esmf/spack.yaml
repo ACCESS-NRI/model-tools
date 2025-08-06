@@ -42,5 +42,8 @@ spack:
       tcl:
         include:
           - esmf
+          - parallelio
+          - netcdf-fortran
+          - fms
         projections:
           esmf: 'model-tools/{name}/v8.7.0'
