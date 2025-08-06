@@ -44,6 +44,7 @@ spack:
           - esmf
           - parallelio
           - netcdf-fortran
+          - netcdf-c
           - fms
         projections:
           esmf: 'model-tools/{name}/v8.7.0'
