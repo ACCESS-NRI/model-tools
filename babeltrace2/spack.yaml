@@ -1,0 +1,22 @@
+# This is a Spack Environment file
+#
+# It describes a set of packages to be installed, along with
+# configuration settings.
+spack:
+  specs:
+    - babeltrace2@git.v2.1.2
+  packages:
+    all:
+      require:
+      - '%intel@2021.10.0'
+  view: true
+  concretizer:
+    unify: true
+  modules:
+    default:
+      tcl:
+        include:
+          - babeltrace2
+        projections:
+          babeltrace2: 'model-tools/{name}/v2.1.2'
+  
