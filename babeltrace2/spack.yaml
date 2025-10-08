@@ -18,5 +18,5 @@ spack:
         include:
           - babeltrace2
         projections:
-          babeltrace2: 'model-tools/{name}/v2.1.2'
+          babeltrace2: 'model-tools/{name}/2.1.2'
   
