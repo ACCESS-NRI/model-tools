@@ -17,6 +17,10 @@ Deployment is on to HPC targets, in this case gadi@NCI, utilising the [build-cd]
 ### babeltrace2
 [babeltrace2](https://github.com/efficios/babeltrace) is a CTF (Common Trace Format) trace processing library that provides both a CLI and Python bindings (bt2). It is a required dependency for [esmf-trace](https://github.com/ACCESS-NRI/esmf-trace), which is used to extract and visualise runtime profiling data from ESMF/NUOPC-based configurations.
 
+### esmf
+[esmf](https://github.com/esmf-org/esmf) is a suite of software tools for developing high-performance, multi-component Earth science modeling applications.
+
+
 ## How to use
 
 **Requirements**: you must be a member of [`vk83`](https://my.nci.org.au/mancini/project/vk83).
