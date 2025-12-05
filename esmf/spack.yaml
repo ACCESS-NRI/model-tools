@@ -3,6 +3,10 @@
 # It describes a set of packages to be installed, along with
 # configuration settings.
 spack:
+  definitions:
+  # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
+  - _name: [esmf]
+  - _version: [v8.7.0]
   specs:
   - esmf@git.v8.7.0
   packages:

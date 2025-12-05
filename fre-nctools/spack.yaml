@@ -3,6 +3,10 @@
 # It describes a set of packages to be installed, along with
 # configuration settings.
 spack:
+  definitions:
+  # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
+  - _name: [fre-nctools]
+  - _version: [2024.05-1]
   specs:
   - fre-nctools@2024.05-1
   packages:
