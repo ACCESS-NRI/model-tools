@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - babeltrace2@2.1.2
+  - babeltrace2@2.1.2
   packages:
     all:
       require:
@@ -16,7 +16,6 @@ spack:
     default:
       tcl:
         include:
-          - babeltrace2
+        - babeltrace2
         projections:
           babeltrace2: 'model-tools/{name}/2.1.2'
-  

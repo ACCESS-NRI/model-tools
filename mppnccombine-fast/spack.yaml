@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - mppnccombine-fast@2025.07.000
+  - mppnccombine-fast@2025.07.000
   packages:
     netcdf-c:
       require:
@@ -25,6 +25,6 @@ spack:
     default:
       tcl:
         include:
-          - mppnccombine-fast
+        - mppnccombine-fast
         projections:
           mppnccombine-fast: 'model-tools/{name}/2025.07.000'

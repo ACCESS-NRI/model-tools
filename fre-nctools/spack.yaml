@@ -4,17 +4,17 @@
 # configuration settings.
 spack:
   specs:
-    - fre-nctools@2024.05-1
+  - fre-nctools@2024.05-1
   packages:
     fre-nctools:
       require:
-        - '%intel@2021.10.0'
+      - '%intel@2021.10.0'
     netcdf-c:
       require:
-        - '@4.9.2'
+      - '@4.9.2'
     netcdf-fortran:
       require:
-        - '@4.6.1'
+      - '@4.6.1'
   view: true
   concretizer:
     unify: true
@@ -22,6 +22,6 @@ spack:
     default:
       tcl:
         include:
-          - fre-nctools
+        - fre-nctools
         projections:
           fre-nctools: 'model-tools/{name}/2024.05-1'
