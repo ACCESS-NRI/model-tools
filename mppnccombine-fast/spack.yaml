@@ -19,9 +19,15 @@ spack:
     openmpi:
       require:
       - '@5.0.5'
+
+    # Compilers
+    intel-oneapi-compilers-classic:
+      require:
+      - '@2021.10.0'
+
     all:
       require:
-      - '%intel@2021.10.0'
+      - '%access_intel'
   view: true
   concretizer:
     unify: true
