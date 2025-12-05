@@ -12,13 +12,18 @@ spack:
   packages:
     fre-nctools:
       require:
-      - '%intel@2021.10.0'
+      - '%access_intel'
     netcdf-c:
       require:
       - '@4.9.2'
     netcdf-fortran:
       require:
       - '@4.6.1'
+
+    # Compilers
+    intel-oneapi-compilers-classic:
+      require:
+      - '@2021.10.0'
   view: true
   concretizer:
     unify: true

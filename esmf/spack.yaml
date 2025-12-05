@@ -30,13 +30,18 @@ spack:
       - '@4.1.7'
     gcc-runtime:
       require:
-      - '%gcc'
+      - '%access_gcc'
     libiconv:
       require:
-        - '%gcc'
+      - '%access_gcc'
+    # Compilers
+    intel-oneapi-compilers-classic:
+      require:
+      - '@2021.10.0'
+
     all:
       require:
-      - '%intel@2021.10.0'
+      - '%access_intel'
       - 'target=x86_64_v4'
   view: true
   concretizer:
