@@ -3,6 +3,10 @@
 # It describes a set of packages to be installed, along with
 # configuration settings.
 spack:
+  definitions:
+  # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
+  - _name: [mppnccombine-fast]
+  - _version: [2025.07.000]
   specs:
   - mppnccombine-fast@2025.07.000
   packages:
