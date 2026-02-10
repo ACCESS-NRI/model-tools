@@ -4,8 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - python@3.11
-    - babeltrace2@2.1.2 +python ^python@3.11
+    - babeltrace2@2.1.2
 
   packages:
     all:
