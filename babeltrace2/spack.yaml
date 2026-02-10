@@ -8,7 +8,7 @@ spack:
   packages:
     all:
       require:
-      - 'target=x86_64_v4'
+      - '%intel@2021.10.0'
   view: true
   concretizer:
     unify: true
