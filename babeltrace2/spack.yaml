@@ -9,7 +9,6 @@ spack:
   packages:
     all:
       require:
-      - '%gcc@14.1.0'
       - 'target=x86_64'
   view: true
   concretizer:
