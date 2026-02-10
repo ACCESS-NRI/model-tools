@@ -5,7 +5,6 @@
 spack:
   specs:
     - babeltrace2@2.1.2
-
   packages:
     all:
       require:
