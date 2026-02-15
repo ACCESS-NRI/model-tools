@@ -21,13 +21,17 @@ spack:
       - '@5.0.5'
 
     # Compilers
-    intel-oneapi-compilers-classic:
+    c:
       require:
-      - '@2021.10.0'
+      - intel-oneapi-compilers-classic@2021.10.0
 
-    all:
+    cxx:
       require:
-      - '%access_intel'
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    fortran:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
   view: true
   concretizer:
     unify: true

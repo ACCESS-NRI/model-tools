@@ -12,36 +12,41 @@ spack:
   packages:
     parallelio:
       require:
-      - '@2.6.2+pnetcdf'
+      - '@2.6.2'
+      - '+pnetcdf'
     netcdf-c:
       require:
-      - '@4.9.2 build_system=cmake build_type=RelWithDebInfo'
+      - '@4.9.2'
+      - 'build_system=cmake build_type=RelWithDebInfo'
     netcdf-fortran:
       require:
       - '@4.6.1'
     fms:
       require:
-      - '@git.2024.03 precision=64 +large_file ~gfs_phys ~quad_precision ~openmp'
+      - '@git.2024.03'
+      - 'precision=64 +large_file ~gfs_phys ~quad_precision ~openmp'
     fortranxml:
       require:
       - '@4.1.2'
     openmpi:
       require:
       - '@4.1.7'
-    gcc-runtime:
-      require:
-      - '%access_gcc'
-    libiconv:
-      require:
-      - '%access_gcc'
+
     # Compilers
-    intel-oneapi-compilers-classic:
+    c:
       require:
-      - '@2021.10.0'
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    cxx:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    fortran:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
 
     all:
       require:
-      - '%access_intel'
       - 'target=x86_64_v4'
   view: true
   concretizer:

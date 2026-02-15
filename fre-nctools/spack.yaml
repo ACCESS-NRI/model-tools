@@ -10,9 +10,6 @@ spack:
   specs:
   - fre-nctools@2024.05-1
   packages:
-    fre-nctools:
-      require:
-      - '%access_intel'
     netcdf-c:
       require:
       - '@4.9.2'
@@ -21,9 +18,17 @@ spack:
       - '@4.6.1'
 
     # Compilers
-    intel-oneapi-compilers-classic:
+    c:
       require:
-      - '@2021.10.0'
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    cxx:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    fortran:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
   view: true
   concretizer:
     unify: true

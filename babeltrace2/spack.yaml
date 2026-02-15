@@ -10,13 +10,19 @@ spack:
   specs:
   - babeltrace2@2.1.2
   packages:
-    intel-oneapi-compilers-classic:
+    # Compilers
+    c:
       require:
-      - '@2021.10.0'
+      - intel-oneapi-compilers-classic@2021.10.0
 
-    all:
+    cxx:
       require:
-      - '%access_intel'
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    fortran:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
+
   view: true
   concretizer:
     unify: true
