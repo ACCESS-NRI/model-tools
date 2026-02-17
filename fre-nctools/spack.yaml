@@ -38,4 +38,5 @@ spack:
         include:
         - fre-nctools
         projections:
-          fre-nctools: 'model-tools/{name}/2024.05-1'
+          # build-cd will inject the _version into this projection
+          fre-nctools: 'model-tools/{name}'

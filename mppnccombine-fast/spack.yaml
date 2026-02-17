@@ -41,4 +41,5 @@ spack:
         include:
         - mppnccombine-fast
         projections:
-          mppnccombine-fast: 'model-tools/{name}/2025.07.000'
+          # build-cd will inject the _version into this projection
+          mppnccombine-fast: 'model-tools/{name}'

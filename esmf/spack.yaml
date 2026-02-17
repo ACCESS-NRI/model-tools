@@ -62,4 +62,5 @@ spack:
         - fms
         - fortranxml
         projections:
-          esmf: 'model-tools/{name}/v8.7.0'
+          # build-cd will inject the _version into this projection
+          esmf: 'model-tools/{name}'
