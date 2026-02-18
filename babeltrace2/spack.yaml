@@ -6,7 +6,7 @@ spack:
   definitions:
   # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
   - _name: [babeltrace2]
-  - _version: [2.1.2]
+  - _version: [2.1.2-1]
   specs:
   - babeltrace2@2.1.2
   packages:
