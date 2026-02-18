@@ -3,18 +3,32 @@
 # It describes a set of packages to be installed, along with
 # configuration settings.
 spack:
+  definitions:
+  # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
+  - _name: [fre-nctools]
+  - _version: [2024.05-1]
   specs:
-    - fre-nctools@2024.05-1
+  - fre-nctools@2024.05-1
   packages:
-    fre-nctools:
-      require:
-        - '%intel@2021.10.0'
     netcdf-c:
       require:
-        - '@4.9.2'
+      - '@4.9.2'
     netcdf-fortran:
       require:
-        - '@4.6.1'
+      - '@4.6.1'
+
+    # Compilers
+    c:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    cxx:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    fortran:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
   view: true
   concretizer:
     unify: true
@@ -22,6 +36,7 @@ spack:
     default:
       tcl:
         include:
-          - fre-nctools
+        - fre-nctools
         projections:
-          fre-nctools: 'model-tools/{name}/2024.05-1'
+          # build-cd will inject the _version into this projection
+          fre-nctools: 'model-tools/{name}'

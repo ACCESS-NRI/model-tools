@@ -3,8 +3,12 @@
 # It describes a set of packages to be installed, along with
 # configuration settings.
 spack:
+  definitions:
+  # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
+  - _name: [mppnccombine-fast]
+  - _version: [2025.07.000-1]
   specs:
-    - mppnccombine-fast@2025.07.000
+  - mppnccombine-fast@2025.07.000
   packages:
     netcdf-c:
       require:
@@ -15,9 +19,19 @@ spack:
     openmpi:
       require:
       - '@5.0.5'
-    all:
+
+    # Compilers
+    c:
       require:
-      - '%intel@2021.10.0'
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    cxx:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    fortran:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
   view: true
   concretizer:
     unify: true
@@ -25,6 +39,7 @@ spack:
     default:
       tcl:
         include:
-          - mppnccombine-fast
+        - mppnccombine-fast
         projections:
-          mppnccombine-fast: 'model-tools/{name}/2025.07.000'
+          # build-cd will inject the _version into this projection
+          mppnccombine-fast: 'model-tools/{name}'

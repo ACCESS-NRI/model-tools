@@ -3,37 +3,51 @@
 # It describes a set of packages to be installed, along with
 # configuration settings.
 spack:
+  definitions:
+  # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
+  - _name: [esmf]
+  - _version: [v8.7.0-1]
   specs:
-    - esmf@git.v8.7.0
+  - esmf@git.v8.7.0
   packages:
     parallelio:
       require:
-        - '@2.6.2+pnetcdf'
+      - '@2.6.2'
+      - '+pnetcdf'
     netcdf-c:
       require:
-        - '@4.9.2 build_system=cmake build_type=RelWithDebInfo'
+      - '@4.9.2'
+      - 'build_system=cmake build_type=RelWithDebInfo'
     netcdf-fortran:
       require:
-        - '@4.6.1'
+      - '@4.6.1'
     fms:
       require:
-        - '@git.2024.03 precision=64 +large_file ~gfs_phys ~quad_precision ~openmp'
+      - '@git.2024.03'
+      - 'precision=64 +large_file ~gfs_phys ~quad_precision ~openmp'
     fortranxml:
       require:
-        - '@4.1.2'
+      - '@4.1.2'
     openmpi:
       require:
-        - '@4.1.7'
-    gcc-runtime:
+      - '@4.1.7'
+
+    # Compilers
+    c:
       require:
-        - '%gcc'
-    libiconv:
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    cxx:
       require:
-          - '%gcc'
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    fortran:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
+
     all:
       require:
-        - '%intel@2021.10.0'
-        - 'target=x86_64_v4'
+      - 'target=x86_64_v4'
   view: true
   concretizer:
     unify: true
@@ -41,11 +55,12 @@ spack:
     default:
       tcl:
         include:
-          - esmf
-          - parallelio
-          - netcdf-fortran
-          - netcdf-c
-          - fms
-          - fortranxml
+        - esmf
+        - parallelio
+        - netcdf-fortran
+        - netcdf-c
+        - fms
+        - fortranxml
         projections:
-          esmf: 'model-tools/{name}/v8.7.0'
+          # build-cd will inject the _version into this projection
+          esmf: 'model-tools/{name}'

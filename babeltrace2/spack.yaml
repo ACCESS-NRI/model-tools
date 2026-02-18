@@ -3,12 +3,26 @@
 # It describes a set of packages to be installed, along with
 # configuration settings.
 spack:
+  definitions:
+  # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
+  - _name: [babeltrace2]
+  - _version: [2.1.2-1]
   specs:
-    - babeltrace2@2.1.2
+  - babeltrace2@2.1.2
   packages:
-    all:
+    # Compilers
+    c:
       require:
-      - '%intel@2021.10.0'
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    cxx:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
+
+    fortran:
+      require:
+      - intel-oneapi-compilers-classic@2021.10.0
+
   view: true
   concretizer:
     unify: true
@@ -16,7 +30,7 @@ spack:
     default:
       tcl:
         include:
-          - babeltrace2
+        - babeltrace2
         projections:
-          babeltrace2: 'model-tools/{name}/2.1.2'
-  
+          # build-cd will inject the _version into this projection
+          babeltrace2: 'model-tools/{name}'
