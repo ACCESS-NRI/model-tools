@@ -38,20 +38,20 @@ To discover what tools and versions are available:
 
 ```sh
 module avail model-tools
+```
 
-```sh
 or a specific tool
 
 ```sh
 module avail model-tools/fre-nctools
+```
 
-```sh
 It also works without the `model-tools` namespace:
 
 ```sh
 module avail fre-nctools
+```
 
-```sh
 To load the most recent version of `fre-nctools`:
 
 ```sh
