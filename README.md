@@ -58,6 +58,10 @@ To load the most recent version of `fre-nctools`:
 module load model-tools/fre-nctools
 ```
 
+## Development
+
+How this repository is developed is essentially in line with `ACCESS-NRI/software-deployment-template`, but with the caveat that we use the `model-tools` prefix in the module projections, to note it is a supplemental tool rather than a model itself.
+
 ## Support
 
 This repository and the software deployed from it are supported by ACCESS-NRI.
