@@ -33,4 +33,4 @@ spack:
         - babeltrace2
         projections:
           # build-cd will inject the _version into this projection
-          babeltrace2: 'model-tools/{name}'
+          babeltrace2: 'model-tools/{name}/{version}'
