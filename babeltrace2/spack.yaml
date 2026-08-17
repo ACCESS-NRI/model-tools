@@ -28,13 +28,17 @@ spack:
       require:
       - intel-oneapi-compilers-classic@2021.10.0
 
+    all:
+      prefer:
+      - target=x86_64_v3
+
   view: true
   concretizer:
     unify: true
   repos:
     access_spack_packages:
       git: https://github.com/ACCESS-NRI/access-spack-packages.git
-      tag: 2026.02.002
+      tag: 2026.08.008
       destination: $env/package-repos/access-spack-packages
   modules:
     default:
