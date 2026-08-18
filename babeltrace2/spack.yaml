@@ -18,15 +18,15 @@ spack:
     # Compilers
     c:
       require:
-      - intel-oneapi-compilers-classic@2021.10.0
+      - intel-oneapi-compilers@2025.2.0
 
     cxx:
       require:
-      - intel-oneapi-compilers-classic@2021.10.0
+      - intel-oneapi-compilers@2025.2.0
 
     fortran:
       require:
-      - intel-oneapi-compilers-classic@2021.10.0
+      - intel-oneapi-compilers@2025.2.0
 
     all:
       prefer:
