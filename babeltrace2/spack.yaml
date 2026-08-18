@@ -40,6 +40,11 @@ spack:
       git: https://github.com/ACCESS-NRI/access-spack-packages.git
       tag: 2026.08.008
       destination: $env/package-repos/access-spack-packages
+    # Remove `builtin` once the babeltrace fix is in `access/v1.1` branch
+    #builtin:
+    #  git: https://github.com/ACCESS-NRI/upstream-spack-packages.git
+    #  branch: access/v1.1-next
+    #  destination: $env/package-repos/upstream-spack-packages
   modules:
     default:
       tcl:
