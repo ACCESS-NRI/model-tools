@@ -46,6 +46,7 @@ spack:
       tcl:
         include:
         - babeltrace2
+        - python
         projections:
           # build-cd will inject the _version into this projection
           babeltrace2: 'model-tools/{name}/{version}'
