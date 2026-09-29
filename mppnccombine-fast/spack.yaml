@@ -6,7 +6,7 @@ spack:
   definitions:
   # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
   - _name: [mppnccombine-fast]
-  - _version: [2025.07.000-1]
+  - _version: [2025.07.000-2]
   # _spack-version informs the branch of spack to use
   - _spack-version: ["1.1"]
   # Release database provenance information - packages for inclusion into the database, and packages just for injection into the modules
@@ -23,7 +23,7 @@ spack:
       - '@1.14.2'
     openmpi:
       require:
-      - '@5.0.5'
+      - '@5.0.8'
 
     # Compilers
     c:
