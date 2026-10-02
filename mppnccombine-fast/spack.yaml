@@ -13,7 +13,7 @@ spack:
   - _provenance: []
   - _injection: []
   specs:
-  - mppnccombine-fast@2025.07.000
+  - mppnccombine-fast@git.e6d09a589f731a110ca2d9cc229c0cd7fa559621=2025.07.000  # On branch missing-tile-fill
   packages:
     netcdf-c:
       require:
