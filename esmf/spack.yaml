@@ -8,7 +8,7 @@ spack:
   - _name: [esmf]
   - _version: [v8.7.0-1]
   # _spack-version informs the branch of spack to use
-  - _spack-version: ["1.1"]
+  - _spack-version: ['1.1']
   # Release database provenance information - packages for inclusion into the database, and packages just for injection into the modules
   - _provenance: []
   - _injection: []
@@ -18,18 +18,18 @@ spack:
     parallelio:
       require:
       - '@2.6.2'
-      - '+pnetcdf'
+      - +pnetcdf
     netcdf-c:
       require:
       - '@4.9.2'
-      - 'build_system=cmake build_type=RelWithDebInfo'
+      - build_system=cmake build_type=RelWithDebInfo
     netcdf-fortran:
       require:
       - '@4.6.1'
     fms:
       require:
       - '@git.2024.03'
-      - 'precision=64 +large_file ~gfs_phys ~quad_precision ~openmp'
+      - precision=64 +large_file ~gfs_phys ~quad_precision ~openmp
     fortranxml:
       require:
       - '@4.1.2'
@@ -52,7 +52,7 @@ spack:
 
     all:
       require:
-      - 'target=x86_64_v4'
+      - target=x86_64_v4
   view: true
   concretizer:
     unify: true
@@ -73,4 +73,4 @@ spack:
         - fortranxml
         projections:
           # build-cd will inject the _version into this projection
-          esmf: 'model-tools/{name}/{version}'
+          esmf: model-tools/{name}/{version}

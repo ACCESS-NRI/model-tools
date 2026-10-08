@@ -8,7 +8,7 @@ spack:
   - _name: [fre-nctools]
   - _version: [2024.05-1]
   # _spack-version informs the branch of spack to use
-  - _spack-version: ["1.1"]
+  - _spack-version: ['1.1']
   # Release database provenance information - packages for inclusion into the database, and packages just for injection into the modules
   - _provenance: []
   - _injection: []
@@ -49,4 +49,4 @@ spack:
         - fre-nctools
         projections:
           # build-cd will inject the _version into this projection
-          fre-nctools: 'model-tools/{name}/{version}'
+          fre-nctools: model-tools/{name}/{version}
