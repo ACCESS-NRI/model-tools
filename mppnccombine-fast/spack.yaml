@@ -8,7 +8,7 @@ spack:
   - _name: [mppnccombine-fast]
   - _version: [2025.07.000-2]
   # _spack-version informs the branch of spack to use
-  - _spack-version: ["1.1"]
+  - _spack-version: ['1.1']
   # Release database provenance information - packages for inclusion into the database, and packages just for injection into the modules
   - _provenance: []
   - _injection: []
@@ -52,4 +52,4 @@ spack:
         - mppnccombine-fast
         projections:
           # build-cd will inject the _version into this projection
-          mppnccombine-fast: 'model-tools/{name}/{version}'
+          mppnccombine-fast: model-tools/{name}/{version}
